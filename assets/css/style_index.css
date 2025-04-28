@@ -14,7 +14,7 @@ h1 {
   font-size: 32px;
 }
 section {
-  border: 4px solid black;
+  border: 4px solid rgba(0, 0, 0, 0.5);
   padding: 8px;
 }
 section ul {
@@ -24,10 +24,21 @@ section ul {
   margin-bottom: 16px;
 }
 section ul li {
+  position: relative;
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 16px;
+}
+section ul li::after {
+  content: "";
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  opacity: 0.25;
 }
 section ul li button {
   height: 100%;
